@@ -37,3 +37,8 @@ function draw() {
     x = width;
   }
 }
+
+//even larger or not
+function setup() {
+  createCanvas(400, 400);
+}
