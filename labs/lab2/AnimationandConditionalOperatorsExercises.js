@@ -1,4 +1,4 @@
-//PUCK SIDE****
+//PUCK SIDE**********************************************************
 
 // settting the size of the circle:
 var radius = 20;
@@ -10,35 +10,51 @@ function setup() {
 }
 
 function draw() {
+  background(176, 171, 171);
   ellipse(mouseX, mouseY, radius, radius);
+  fill(3, 115, 252);
 }
 
-//WORLD WRAP****
+// couldn't figure out how to make it change colors based on position
+
+function draw() {
+  background(176, 171, 171);
+  ellipse(mouseX, mouseY, radius, radius);
+  fill(252, 3, 3);
+}
+
+//WORLD WRAP******************************************************
+
+var x = 0;
+var y = 200;
+
+var xspeed = 5;
+var yspeed = 0;
 
 function setup() {
   createCanvas(800, 600);
 }
 
 function draw() {
-  background(200);
+  background(166, 225, 255);
 
-  // Draw a circle
-  stroke(50);
-  fill(100);
-  ellipse(x, y, 24, 24);
+  x = x + xspeed;
+  y = y + yspeed;
 
-  // Jiggling randomly on the horizontal axis
-  x = x + random(-1, 1);
-  // Moving up at a constant speed
-  x = x - 1;
+  fill(177, 46, 242);
 
-  // Reset to the bottom
-  if (x < 0) {
-    x = width;
+  if (x > 800) {
+    x = 0;
+
+    console.log("greater than");
   }
+
+  circle(x, y, 30);
 }
 
-//even larger or not
-function setup() {
-  createCanvas(400, 400);
+// COUNTER *********************************************************
+let counter = 0;
+function draw() {
+  counter = counter + 1;
+  console.log(counter);
 }
