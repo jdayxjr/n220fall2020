@@ -1,7 +1,7 @@
 //FizzBuzz**********************************************************
 
 function setup() {
-  createCanvas(400, 300);
+  createCanvas(800, 800);
 }
 
 function draw() {
@@ -10,6 +10,21 @@ function draw() {
 
   // for loop
   for (var count = 0; count < 25; count++) {
-    circle(100, 100, count * 25);
+    circle(count * 30, 100, 200);
+  }
+}
+
+//Circles inisde of Circles**********************************************************
+function setup() {
+  createCanvas(400, 300);
+}
+
+function draw() {
+  background(92, 181, 65);
+  noFill();
+
+  // for loop
+  for (var count = 0; count < 25; count++) {
+    circle(100, 100, count * 20);
   }
 }
