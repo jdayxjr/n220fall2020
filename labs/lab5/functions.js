@@ -1,3 +1,6 @@
+//stoplight**********************************************************
+
+
 let stoplight = ["#F62727", "#E9ED30", "#00ff51"];
 
 function setup() {
@@ -9,4 +12,21 @@ function draw() {
     fill(stoplight[count]);
     circle(80 + 100 * count, 80, 80);
   }
+}
+
+
+//bounce off**********************************************************
+
+
+
+function setup(){
+createCanvas(350,150);
+background();
+
+}
+
+function draw () {
+
+
+
 }
