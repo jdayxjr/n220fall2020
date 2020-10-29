@@ -21,10 +21,10 @@ function draw() {
 let xCircle = 0;
 let yCircle = 0;
 
-let rectX = 100;
-let rectY =100;
-let rectW= 0;
-let rectH= 0;
+let rectX = 0;
+let rectY =180;
+let rectW= 300;
+let rectH= 20;
 
 let xSpeed =2;
 let ySpeed= 2;
@@ -47,14 +47,14 @@ function draw() {
   // makes the ball move ^^^ 
   
   
-  if (xCircle > width || xCircle < 0) {
-    xSpeed = xSpeed * -1;
+ if (xCircle > width || xCircle < 0) {
+   xSpeed = xSpeed * -1;
   //multiply by negative one to alternate bt +/- 
   //this makes the ball bounce to each side
 }
   
   if (yCircle > height || yCircle < 0){
-    ySpeed = ySpeed *-1;
+   ySpeed = ySpeed *-1;
 
     //multiply by negative one to alternate bt +/- 
   //this makes the ball bounce to each side
@@ -62,28 +62,31 @@ function draw() {
   
   fill(27,86,237);
   circle(xCircle,yCircle,30);
-  // draws the circle and the position of the ball where its supposed to be.
-  
+  // draws the circle and the position of the ball 
 
   fill(86);
-  circle(rectX,rectY,30);
-  // draws the rect and the position of the ball where its supposed to be.
+  rect(rectX,rectY,rectW, rectH,30);
+  // draws the rect and the position of the rect
+  
+  
+
   
   function collideRect(circleX, circleY, rectX, rectY, rectW, rectH) {
 
-    var colliding = false;
+     var colliding = false;
 
-    if(circleX > rectX && circleX < rectX + rectW) {
+     if(circleX > rectX && circleX < rectX + rectW) {
 
-        if(circleY > rectY && circleY < rectY + rectH) {
+         if(circleY > rectY && circleY < rectY + rectH) {
+           
 
-              return true;
+               return true;
 
-        }
+         }
 
-   }
+    }
 
-   return false;
+    return false;
 
 }
 }
