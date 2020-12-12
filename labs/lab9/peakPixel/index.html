@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>peak pixel</title>
+  <style> 
+  
+  /* the outline of the canvas css*/
+    #canvas{
+    
+    border:1px solid #000;
+    height: 500px;
+    width: 500px;
+    
+    }
+    </style>
+  <script>
+
+// this part of the function adds 100 px to the height of the greenbox div
+    function GreenBoxH(){
+    
+    var currentHeight = document.getElementById('green').style.height;
+  
+    currentHeight = currentHeight.replace('px','');
+    
+    document.getElementById('green').style.height = (parseInt(currentHeight) + 100).toString() + "px";
+    
+    
+    
+    }
+
+    // this part of the function adds 100 px to the width of the greenbox div
+    function GreenBoxW(){
+    
+    var currentWidth = document.getElementById('green').style.width;
+  
+    currentWidth = currentWidth.replace('px','');
+    
+    document.getElementById('green').style.width = (parseInt(currentWidth) + 100).toString() + "px";
+    
+    
+    }
+    
+  </script>
+</head>
+<body>
+
+  <!--the canvas div around the greenbox-->
+  <div id='canvas'>
+
+    <!--starting point for the greenbox the height width color etc...-->
+    <div id="green" style="width:100px; height:50px; background-color:green;">
+    
+    </div>
+    
+    </div>
+    <br>
+    
+    <br>
+
+    <!-- buttons-->
+    <button onclick="GreenBoxH()">click height</button>
+    <br />
+    <button onclick="GreenBoxW()">click width</button>
+</body>
+</html>
