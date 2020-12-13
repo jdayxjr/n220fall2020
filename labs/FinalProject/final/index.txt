@@ -4,7 +4,7 @@
 <head lang="en">
     <title>Card Mind Game</title>
     <meta charset="utf-8" />
-    <script src="/labs/FinalProject/app.js"></script>
+    <script src="/labs/FinalProject/js/app.js"></script>
     <style>
         .Deck {
             width: 50%;
